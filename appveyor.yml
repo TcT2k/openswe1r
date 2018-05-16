@@ -62,3 +62,11 @@ build_script:
 artifacts:
   - path: $(BUILD_TYPE)_build/*.zip
     name: executable
+
+deploy:
+  - provider: GitHub
+    description: OpenSWE1R Release
+    auth_token:
+      secure: +plQ1ixPhDQwnZQdREADOlcN8eY0EGF0mmvmbAZG9G936n1UFhl4R8fWJ8tJ6JTj
+    on:
+      branch: cmake_package
