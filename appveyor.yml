@@ -64,9 +64,15 @@ artifacts:
 
 deploy:
   - provider: GitHub
-    description: OpenSWE1R Development Release
+    tag: dev-$(appveyor_build_version)
+    release: Development Release $(appveyor_build_version)
+    description: >
+      Automatically created development release $(appveyor_build_version)
+      Use this release to test cutting edge features and changes not
+      included in the latest offical release build.
     prerelease: true
     auth_token:
       secure: +plQ1ixPhDQwnZQdREADOlcN8eY0EGF0mmvmbAZG9G936n1UFhl4R8fWJ8tJ6JTj
     on:
+      appveyor_repo_tag: false
       branch: deployment_test
