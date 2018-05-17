@@ -11,9 +11,6 @@ environment:
   CHERE_INVOKING: 1
   matrix:
     - platform: x64
-      BUILD_TYPE: mingw
-      MSYSTEM: MINGW64
-    - platform: x64
       BUILD_TYPE: msvc
       VCPKG_DEFAULT_TRIPLET: x64-windows
 
