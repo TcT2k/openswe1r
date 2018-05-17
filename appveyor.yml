@@ -65,8 +65,9 @@ artifacts:
 
 deploy:
   - provider: GitHub
-    description: OpenSWE1R Release
+    description: OpenSWE1R Development Release
+    prerelease: true
     auth_token:
       secure: +plQ1ixPhDQwnZQdREADOlcN8eY0EGF0mmvmbAZG9G936n1UFhl4R8fWJ8tJ6JTj
     on:
-      branch: cmake_package
+      branch: deployment_test
